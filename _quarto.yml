@@ -3,35 +3,32 @@ project:
   output-dir: _site
 
 website:
-  title: "Nicolay [Etternavn]"
-  description: "Quantitative finance · empirical asset pricing · risk modelling"
-  site-url: "https://dittbrukernavn.github.io"      # <- bytt til din GitHub Pages-URL
-  repo-url: "https://github.com/dittbrukernavn/dittbrukernavn.github.io"
+  title: "Nicolay Vallee"
+  description: "MSc Business Analytics - Siv"
+  site-url: "https://valleeni.github.io"      # <- bytt til din GitHub Pages-URL
+  repo-url: "https://github.com/valleeni/valleeni.github.io"
   navbar:
     background: light
     pinned: true
     left:
-      - text: "Hjem"
+      - text: "Home"
         href: index.qmd
-      - text: "CV"
+      - text: "Curriculum Vitae"
         href: cv.qmd
-      - text: "Forskning"
+      - text: "Projects"
         href: research.qmd
-      - text: "Blogg"
+      - text: "Blog"
         href: blog.qmd
     right:
-      - icon: github
-        href: https://github.com/dittbrukernavn
-        aria-label: GitHub
       - icon: linkedin
-        href: https://www.linkedin.com/in/dittnavn
+        href: https://www.linkedin.com/in/nicolay-vallee-81031b137/
         aria-label: LinkedIn
       - icon: envelope
-        href: mailto:din@epost.no
-        aria-label: E-post
+        href: mailto:nicolay@vallee.no
+        aria-label: E-mail
   page-footer:
-    left: "© 2026 Nicolay [Etternavn]"
-    right: "Bygget med [Quarto](https://quarto.org)"
+    left: "© 2026 Nicolay Vallee"
+    right: "Built with [Quarto](https://quarto.org)"
 
 format:
   html:
