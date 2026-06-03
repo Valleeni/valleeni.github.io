@@ -1,33 +1,23 @@
 ---
-title: "Nicolay [Etternavn]"
+title: "Nicolay Vallee"
 about:
   template: trestles
   image: assets/profile.jpg
   image-shape: round
   links:
-    - icon: github
-      text: GitHub
       href: https://github.com/dittbrukernavn
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/dittnavn
     - icon: envelope
       text: E-post
-      href: mailto:din@epost.no
+      href: nicolay@vallee.no
 ---
 
-Jeg er MSc-student i Business Analytics ved Universitetet i Innlandet (Lillehammer),
-med spesialisering i empirisk finans og kvantitativ risikomodellering.
+I am Master of Science in Business Administration - Major Business Analytics student with expected graduation in June 2026.
 
-Masteroppgaven min sammenligner karakteristikk-baserte (Barra-stil) og statistiske
-(PCA-baserte) faktormodeller for kovariansestimering og konstruksjon av
-minimum-varians-porteføljer på Oslo Børs (OSEBX), evaluert med Diebold–Mariano-tester.
-
-Interessefeltene mine spenner fra faktormodeller og porteføljeoptimering til
-opsjonsprising, markedsmikrostruktur og fixed income. Jeg skriver av og til
-[blogginnlegg](blog.qmd) der jeg jobber meg gjennom metoder med kjørbar kode og figurer.
+My main interests are quantitative finance, machine learning and econometrics.
 
 ::: {.callout-note appearance="simple"}
-Ser etter roller innen kvantitativ risiko / empirisk finans, og vurderer en PhD.
-Ta gjerne kontakt.
+Looking for roles within quantitative finance / financial research in Oslo.
 :::
