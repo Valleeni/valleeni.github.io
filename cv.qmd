@@ -1,0 +1,47 @@
+---
+title: "CV"
+toc: true
+toc-title: "Innhold"
+---
+
+[📄 Last ned PDF-versjon](assets/cv.pdf){.btn .btn-outline-primary .btn-sm}
+
+## Utdanning
+
+::: {.cv-entry}
+[MSc Business Analytics]{.place} · Universitetet i Innlandet, Lillehammer
+[Forventet juni 2026]{.date}
+
+Masteroppgave: sammenligning av karakteristikk-baserte og statistiske faktormodeller
+for kovariansestimering og GMV-porteføljer på OSEBX (evaluert via Diebold–Mariano).
+:::
+
+::: {.cv-entry}
+[BSc Business Economics]{.place} · [Institusjon]
+[År]{.date}
+:::
+
+::: {.cv-entry}
+[Music Business Management]{.place} · [Institusjon]
+[År]{.date}
+:::
+
+## Erfaring
+
+::: {.cv-entry}
+[Stilling]{.place} · Arbeidsgiver
+[Periode]{.date}
+
+- Kort, resultatorientert punkt.
+- Kort, resultatorientert punkt.
+:::
+
+## Ferdigheter
+
+**Programmering:** Python (pandas, NumPy, scikit-learn), R (tidyverse, econometrics), SQL, LaTeX
+**Metoder:** faktormodeller, porteføljeoptimering, tidsserie-økonometri, PCA/RMT, opsjonsprising
+**Språk:** Norsk (morsmål), Engelsk (flytende)
+
+## Utvalgte prosjekter
+
+Se [Forskning](research.qmd) for publikasjoner og working papers.

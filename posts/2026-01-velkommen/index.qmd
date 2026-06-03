@@ -1,0 +1,15 @@
+---
+title: "Velkommen til bloggen"
+description: "Et kort første innlegg om hva som kommer her."
+author: "Nicolay [Etternavn]"
+date: "2026-01-15"
+categories: [meta]
+---
+
+Dette er et vanlig markdown-innlegg uten kjørbar kode — bra for korte notater,
+refleksjoner eller leselister.
+
+For å lage et nytt innlegg: kopier denne mappen, gi den et nytt navn under `posts/`,
+og rediger `index.qmd`. Quarto plukker det opp automatisk i listingen på [Blogg](../../blog.qmd).
+
+Neste innlegg viser hvordan man embedder kjørbar Python med en interaktiv graf.

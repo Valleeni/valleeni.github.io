@@ -1,0 +1,69 @@
+---
+title: "Minimum-varians-vekter under faktorstruktur"
+description: "Et kjørbart eksempel: low-rank kovarians og en interaktiv graf med Plotly."
+author: "Nicolay [Etternavn]"
+date: "2026-02-01"
+categories: [python, portfolio, factor-models]
+execute:
+  echo: true
+  warning: false
+jupyter: python3
+---
+
+Dette innlegget viser hvordan en `.qmd`-fil kjører Python ved render og produserer en
+**interaktiv** graf. Vi simulerer avkastning under en enkel faktorstruktur og ser på
+hvordan estimert porteføljevarians oppfører seg når antall faktorer varierer.
+
+```{python}
+import numpy as np
+import plotly.graph_objects as go
+
+rng = np.random.default_rng(42)
+
+N, T, K = 60, 500, 3                      # aktiva, observasjoner, sanne faktorer
+B = rng.normal(size=(N, K))               # faktor-loadings
+F = rng.normal(size=(T, K))               # faktoravkastning
+eps = rng.normal(scale=0.5, size=(T, N))  # idiosynkratisk støy
+R = F @ B.T + eps                         # avkastningsmatrise
+```
+
+Vi estimerer GMV-vekter $w \propto \Sigma^{-1}\mathbf{1}$ via PCA-rekonstruksjon av
+$\Sigma$ for ulikt antall beholdte komponenter, og måler realisert porteføljevarians.
+
+```{python}
+def gmv_variance(R, k):
+    S = np.cov(R, rowvar=False)
+    vals, vecs = np.linalg.eigh(S)
+    idx = np.argsort(vals)[::-1]
+    vals, vecs = vals[idx], vecs[:, idx]
+    # behold k komponenter + diagonal idiosynkratisk rest (Σ ≈ low-rank + diag)
+    low = vecs[:, :k] @ np.diag(vals[:k]) @ vecs[:, :k].T
+    diag = np.diag(np.diag(S - low))
+    Sigma = low + diag
+    inv = np.linalg.inv(Sigma)
+    ones = np.ones(R.shape[1])
+    w = inv @ ones / (ones @ inv @ ones)
+    return float(w @ S @ w)
+
+ks = list(range(1, 16))
+variances = [gmv_variance(R, k) for k in ks]
+```
+
+```{python}
+fig = go.Figure()
+fig.add_trace(go.Scatter(x=ks, y=variances, mode="lines+markers",
+                         line=dict(color="#1b5e8c", width=2)))
+fig.add_vline(x=K, line_dash="dash", line_color="#c0392b",
+              annotation_text="sanne faktorer (K=3)")
+fig.update_layout(
+    title="Realisert GMV-varians vs. antall beholdte komponenter",
+    xaxis_title="Antall PCA-komponenter (k)",
+    yaxis_title="Realisert porteføljevarians",
+    template="plotly_white", height=420,
+)
+fig
+```
+
+Legg merke til hvordan variansen stabiliserer seg rundt det sanne antallet faktorer —
+en intuitiv illustrasjon av hvorfor riktig faktorvalg (Bai–Ng o.l.) er viktig.
+Grafen over er fullt interaktiv: hover, zoom og pan fungerer i nettleseren.

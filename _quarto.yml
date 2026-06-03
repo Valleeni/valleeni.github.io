@@ -1,0 +1,49 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Nicolay [Etternavn]"
+  description: "Quantitative finance · empirical asset pricing · risk modelling"
+  site-url: "https://dittbrukernavn.github.io"      # <- bytt til din GitHub Pages-URL
+  repo-url: "https://github.com/dittbrukernavn/dittbrukernavn.github.io"
+  navbar:
+    background: light
+    pinned: true
+    left:
+      - text: "Hjem"
+        href: index.qmd
+      - text: "CV"
+        href: cv.qmd
+      - text: "Forskning"
+        href: research.qmd
+      - text: "Blogg"
+        href: blog.qmd
+    right:
+      - icon: github
+        href: https://github.com/dittbrukernavn
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/dittnavn
+        aria-label: LinkedIn
+      - icon: envelope
+        href: mailto:din@epost.no
+        aria-label: E-post
+  page-footer:
+    left: "© 2026 Nicolay [Etternavn]"
+    right: "Bygget med [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme:
+      - cosmo
+      - styles.scss
+    toc: true
+    code-fold: false
+    code-tools: true
+    highlight-style: github
+    fontsize: 1.05em
+    linkcolor: "#1b5e8c"
+
+bibliography: references.bib
+csl: https://www.zotero.org/styles/apa
