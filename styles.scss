@@ -1,7 +1,12 @@
 /*-- scss:defaults --*/
 
-// En rolig, profesjonell palett som fungerer for både risk-rekrutterer og akademia.
-$font-family-sans-serif: "Source Sans Pro", -apple-system, "Segoe UI", sans-serif;
+// Importer fonter fra Google Fonts
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+Pro:wght@400;600&display=swap');
+
+// Source Serif Pro som hovedfont (LaTeX-aktig, akademisk).
+// Source Sans Pro beholdes som sans for navbar/UI-elementer.
+$font-family-serif: "Source Serif Pro", Georgia, "Times New Roman", serif;
+$font-family-sans-serif: "Source Serif Pro", Georgia, "Times New Roman", serif;
 $font-family-monospace: "JetBrains Mono", "SF Mono", Menlo, monospace;
 
 $primary:   #1b5e8c;   // dempet blå
@@ -13,7 +18,21 @@ $navbar-fg: #232730;
 
 /*-- scss:rules --*/
 
-// Litt mer luft og en strammere kolonnebredde for lesbarhet.
+// Brødtekst i serif
+body {
+  font-family: "Source Serif Pro", Georgia, "Times New Roman", serif;
+}
+
+// Overskrifter også i serif, men litt strammere
+h1, h2, h3, h4, h5, h6,
+#title-block-header .title {
+  font-family: "Source Serif Pro", Georgia, serif;
+}
+
+// Navbar i sans-serif for en ren kontrast mot brødteksten
+.navbar, .navbar-title {
+  font-family: "Source Sans Pro", -apple-system, "Segoe UI", sans-serif;
+}
 .navbar-title {
   font-weight: 600;
   letter-spacing: -0.01em;
