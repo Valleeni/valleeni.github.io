@@ -5,19 +5,19 @@ about:
   image: assets/profile.jpg
   image-shape: round
   links:
-      href: https://github.com/dittbrukernavn
     - icon: linkedin
       text: LinkedIn
-      href: https://www.linkedin.com/in/dittnavn
+      href: https://www.linkedin.com/in/nicolay-vallee-81031b137/
     - icon: envelope
       text: E-post
-      href: nicolay@vallee.no
+      href: mailto:nicolay@vallee.no
 ---
 
-I am Master of Science in Business Administration - Major Business Analytics student with expected graduation in June 2026.
+M. Sc. Business Analytics
 
-My main interests are quantitative finance, machine learning and econometrics.
+My main interests are economics, quantitative finance, machine learning and econometrics.
 
 ::: {.callout-note appearance="simple"}
-Looking for roles within quantitative finance / financial research in Oslo.
+Looking for roles as analyst, business analyst or financial analyst.
 :::
+
