@@ -1,0 +1,28 @@
+project:
+  output-dir: _site/en
+
+lang: en
+
+website:
+  title: "Nicolay Vallée"
+  navbar:
+    background: light
+    pinned: true
+    left:
+      - href: index.qmd
+        text: CV
+      - href: cv-extended.qmd
+        text: Extended CV
+    right:
+      - href: ../nb/
+        text: "NO"
+        aria-label: Norsk versjon
+      - icon: linkedin
+        href: https://www.linkedin.com/in/nicolay-vallee-81031b137/
+        aria-label: LinkedIn
+      - icon: envelope
+        href: mailto:nicolay@vallee.no
+        aria-label: E-mail
+  page-footer:
+    left: "© 2026 Nicolay Vallée"
+    right: "Built with [Quarto](https://quarto.org)"

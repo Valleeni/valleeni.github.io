@@ -18,17 +18,32 @@ jobs:
 
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
-
-      - name: Set up Python
-        uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          version: 1.6.40
 
-      - name: Install Python deps
-        run: pip install -r requirements.txt
+      - name: Render English (default, -> _site/en)
+        run: quarto render --profile en
 
-      - name: Render site
-        run: quarto render
+      - name: Render Norwegian (-> _site/nb)
+        run: quarto render --profile nb
+
+      - name: Add root redirect and CNAME
+        run: |
+          echo "vallee.no" > _site/CNAME
+          cat > _site/index.html << 'HTML'
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="utf-8">
+            <meta http-equiv="refresh" content="0; url=./en/">
+            <link rel="canonical" href="https://vallee.no/en/">
+            <title>Nicolay Vallée</title>
+          </head>
+          <body>
+            Redirecting to <a href="./en/">vallee.no/en</a>…
+          </body>
+          </html>
+          HTML
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

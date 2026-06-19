@@ -1,0 +1,28 @@
+project:
+  output-dir: _site/nb
+
+lang: nb
+
+website:
+  title: "Nicolay Vallée"
+  navbar:
+    background: light
+    pinned: true
+    left:
+      - href: index.qmd
+        text: CV
+      - href: cv-extended.qmd
+        text: Utvidet CV
+    right:
+      - href: ../en/
+        text: "EN"
+        aria-label: English version
+      - icon: linkedin
+        href: https://www.linkedin.com/in/nicolay-vallee-81031b137/
+        aria-label: LinkedIn
+      - icon: envelope
+        href: mailto:nicolay@vallee.no
+        aria-label: E-post
+  page-footer:
+    left: "© 2026 Nicolay Vallée"
+    right: "Bygget med [Quarto](https://quarto.org)"

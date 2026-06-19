@@ -1,0 +1,164 @@
+---
+title: "Extended CV"
+toc: true
+toc-depth: 3
+---
+
+::: {when-profile="en"}
+
+A detailed companion to the [CV](index.qmd): what the courses covered, what the
+roles involved, and what I worked on.
+
+## Education
+
+### MSc Business Analytics — Inland Norway University of Applied Sciences, Lillehammer {.place}
+[Aug 2024 – Jun 2026]{.date}
+
+A quantitative master's specialising in empirical finance and risk modelling,
+combining econometrics, statistical learning, and programming with applied
+finance. Selected courses:
+
+- **Financial modelling.** Arbitrage pricing, forward and futures pricing, put–call parity, and option strategies (e.g. spreads). Implemented pricing models and verified theoretical relationships numerically.
+- **Quantitative methods / Advanced statistical modelling.** Regression and inference on cross-sectional and panel data, hypothesis testing, and the assumptions and failure modes of linear models. Emphasis on interpreting estimates critically rather than mechanically.
+- **Forecasting models.** Time-series modelling and out-of-sample evaluation, including the distinction between in-sample fit and genuine predictive performance.
+- **Machine learning.** Supervised and unsupervised methods, regularisation, and the bias–variance trade-off, with attention to overfitting and honest validation.
+- **Efficiency analysis.** Frontier methods for benchmarking relative performance across units.
+- **Programming (Python & R).** Building end-to-end data and modelling pipelines: data acquisition, cleaning, transformation, estimation, and reporting.
+- **Data integration (SQL).** Relational data modelling and querying for analytics.
+- **GDPR.** Data-protection principles relevant to handling personal and firm data.
+
+### One-Year Programme in Business Economics — Inland Norway University of Applied Sciences, Rena {.place}
+[Aug 2022 – Jun 2023]{.date}
+
+A conversion year building the economics and quantitative foundation for the
+master's: accounting, investment and finance, macro- and microeconomics,
+business calculus, and statistics.
+
+### Bachelor in Music Business Management — Inland Norway University of Applied Sciences, Rena {.place}
+[Aug 2019 – Jun 2022]{.date}
+
+An interdisciplinary business degree in the creative industries, covering
+management, marketing, contracts, and project work — the starting point for a
+deliberate pivot toward quantitative finance.
+
+## Experience
+
+### Teaching Assistant — Resource and Environmental Economics {.place}
+[Inland Norway University of Applied Sciences, Evenstad · Aug 2023 – Jan 2024]{.date}
+
+Supported the teaching of an undergraduate course in resource and environmental
+economics.
+
+- Held weekly guidance sessions, working through problem sets and clarifying core microeconomic concepts (optimisation, externalities, resource allocation over time).
+- Graded approximately 30 assignments per round, giving written feedback aimed at improving students' reasoning rather than only marking answers.
+- Worked independently with responsibility for a recurring part of the course delivery.
+
+## Selected projects
+
+### Master's thesis — fundamental vs. statistical risk factor models {.place}
+[2026]{.date}
+
+Compared a fundamental (characteristic-based) multi-factor risk model against a
+statistical (PCA-based) factor model for covariance estimation and
+minimum-variance portfolio construction on the Oslo Stock Exchange.
+
+- **Data pipeline.** Built an ETL pipeline for roughly 400 Norwegian equities — including delisted firms to limit survivorship bias — with point-in-time adjustment of accounting ratios and currency conversion to a common unit.
+- **Estimation.** Estimated the fundamental model by iterated Weighted Least Squares across 1707 daily cross-sections; estimated the statistical model by rolling principal component analysis.
+- **Evaluation.** Compared the two via predicted global minimum-variance portfolios in a walk-forward, out-of-sample design, testing realised loss differentials with the Diebold–Mariano test.
+- **Result.** The two model families were statistically indistinguishable over the full out-of-sample period — interpreted, in light of the estimation-error literature, as a substantive finding about a small market rather than a non-result.
+
+### Black–Scholes option pricing via Monte Carlo {.place}
+[2025]{.date}
+
+Implemented Monte Carlo pricing of European options in Python and verified
+convergence to the Black–Scholes closed form, showing the standard error shrink
+with the number of simulations in line with the law of large numbers.
+
+### Beta compression as a market indicator {.place}
+[2025]{.date}
+
+Tested whether compression in the cross-sectional dispersion of betas precedes
+market crashes (Russell 3000, 1990–2025) using logistic regression and the Wald
+test in R, with explicit treatment of look-ahead bias and p-value inflation as
+limitations.
+
+:::
+
+::: {when-profile="nb"}
+
+En detaljert utdyping av [CV-en](index.qmd): hva emnene inneholdt, hva rollene gikk
+ut på, og hva jeg har jobbet med.
+
+## Utdanning
+
+### MSc Business Analytics (siviløkonom) — Høgskolen i Innlandet, Lillehammer {.place}
+[Aug 2024 – Jun 2026]{.date}
+
+En kvantitativ master med spesialisering i empirisk finans og risikomodellering,
+som kombinerer økonometri, statistisk læring og programmering med anvendt
+finans. Utvalgte emner:
+
+- **Finansiell modellering.** Arbitrasjeprising, prising av forwards og futures, put–call-paritet og opsjonsstrategier (f.eks. spreads). Implementerte prisingsmodeller og verifiserte teoretiske sammenhenger numerisk.
+- **Kvantitative metoder / avansert statistisk modellering.** Regresjon og inferens på tverrsnitts- og paneldata, hypotesetesting, og forutsetningene og svakhetene i lineære modeller. Vekt på kritisk tolkning av estimater fremfor mekanisk bruk.
+- **Prognosemodeller.** Tidsseriemodellering og out-of-sample-evaluering, inkludert skillet mellom in-sample-tilpasning og reell prediktiv evne.
+- **Maskinlæring.** Veiledet og ikke-veiledet læring, regularisering og bias–varians-avveiingen, med oppmerksomhet på overtilpasning og ærlig validering.
+- **Effektivitetsanalyse.** Frontmetoder for å sammenligne relativ ytelse på tvers av enheter.
+- **Programmering (Python og R).** Bygging av komplette data- og modelleringspipelines: innhenting, rensing, transformasjon, estimering og rapportering.
+- **Dataintegrasjon (SQL).** Relasjonell datamodellering og spørringer for analyse.
+- **GDPR.** Personvernprinsipper relevant for håndtering av person- og selskapsdata.
+
+### Årsstudium i bedriftsøkonomi — Høgskolen i Innlandet, Rena {.place}
+[Aug 2022 – Jun 2023]{.date}
+
+Et påbyggingsår som la det økonomiske og kvantitative grunnlaget for masteren:
+regnskap, investering og finansiering, makro- og mikroøkonomi, matematikk for
+økonomer og statistikk.
+
+### Bachelor i Music Business Management — Høgskolen i Innlandet, Rena {.place}
+[Aug 2019 – Jun 2022]{.date}
+
+En tverrfaglig økonomiutdanning rettet mot kreative næringer — ledelse,
+markedsføring, kontrakter og prosjektarbeid — og utgangspunktet for en bevisst
+dreining mot kvantitativ finans.
+
+## Erfaring
+
+### Læringsassistent — ressurs- og miljøøkonomi {.place}
+[Høgskolen i Innlandet, Evenstad · Aug 2023 – Jan 2024]{.date}
+
+Bidro i undervisningen av et bacheloremne i ressurs- og miljøøkonomi.
+
+- Holdt ukentlige veiledningsøkter der jeg gikk gjennom oppgavesett og klargjorde sentrale mikroøkonomiske begreper (optimering, eksternaliteter, ressursallokering over tid).
+- Rettet om lag 30 innleveringer per runde, med skriftlig tilbakemelding rettet mot å forbedre studentenes resonnement, ikke bare å sette karakter.
+- Jobbet selvstendig med ansvar for en fast del av emnegjennomføringen.
+
+## Utvalgte prosjekter
+
+### Masteroppgave — fundamentale vs. statistiske risikofaktormodeller {.place}
+[2026]{.date}
+
+Sammenlignet en fundamental (karakteristikk-basert) multifaktor-risikomodell mot
+en statistisk (PCA-basert) faktormodell for kovariansestimering og konstruksjon
+av minimum-varians-porteføljer på Oslo Børs.
+
+- **Datapipeline.** Bygde en ETL-pipeline for om lag 400 norske aksjer — inkludert avnoterte selskaper for å begrense overlevelsesskjevhet — med point-in-time-justering av regnskapsnøkkeltall og valutakonvertering til en felles enhet.
+- **Estimering.** Estimerte den fundamentale modellen med iterert vektet minste kvadraters metode over 1707 daglige tverrsnitt; estimerte den statistiske modellen med rullerende prinsipalkomponentanalyse.
+- **Evaluering.** Sammenlignet de to via predikerte globale minimum-varians-porteføljer i et walk-forward out-of-sample-design, og testet realiserte tapsdifferanser med Diebold–Mariano-testen.
+- **Resultat.** De to modellfamiliene var statistisk uskillbare over hele out-of-sample-perioden — tolket, i lys av litteraturen om estimeringsfeil, som et substansielt funn om et lite marked snarere enn et ikke-resultat.
+
+### Opsjonsprising med Black–Scholes og Monte Carlo {.place}
+[2025]{.date}
+
+Implementerte Monte Carlo-prising av europeiske opsjoner i Python og verifiserte
+konvergens mot den lukkede Black–Scholes-løsningen, der standardfeilen avtar med
+antall simuleringer i tråd med store talls lov.
+
+### Betakompresjon som markedsindikator {.place}
+[2025]{.date}
+
+Testet om kompresjon i tverrsnittsspredningen av betaer går forut for
+markedsfall (Russell 3000, 1990–2025), med logistisk regresjon og Wald-test i R,
+og med eksplisitt behandling av look-ahead-skjevhet og p-verdi-inflasjon som
+begrensninger.
+
+:::

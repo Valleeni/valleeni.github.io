@@ -1,5 +1,5 @@
 ---
-title: "Nicolay Vallee"
+title: "Nicolay Vallée"
 about:
   template: trestles
   image: assets/profile.jpg
@@ -9,15 +9,177 @@ about:
       text: LinkedIn
       href: https://www.linkedin.com/in/nicolay-vallee-81031b137/
     - icon: envelope
-      text: E-post
+      text: E-mail
       href: mailto:nicolay@vallee.no
 ---
 
-M. Sc. Business Analytics
+::: {when-profile="en"}
+**M.Sc. Business Analytics** · Empirical finance and quantitative risk modelling.
+Looking for quantitative roles in finance and risk in the Oslo area.
 
-My main interests are economics, quantitative finance, machine learning and econometrics.
+## Education
 
-::: {.callout-note appearance="simple"}
-Looking for roles as analyst, business analyst or financial analyst.
+::: {.cv-entry}
+[University of Inland Norway, Lillehammer]{.place} · MSc Business Analytics
+[Aug 2024 – Jun 2026]{.date}
+
+Relevant courses: financial modelling, quantitative methods, forecasting models,
+machine learning, advanced statistical modelling, efficiency analysis,
+programming (Python & R), data integration (SQL), GDPR.
 :::
 
+::: {.cv-entry}
+[University of Inland Norway, Rena]{.place} · One-Year Programme in Business Economics
+[Aug 2022 – Jun 2023]{.date}
+
+Relevant courses: accounting, investment and finance, macro- and
+microeconomics, business calculus, statistics.
+:::
+
+::: {.cv-entry}
+[University of Inland Norway, Rena]{.place} · Bachelor in Music Business Management
+[Aug 2019 – Jun 2022]{.date}
+:::
+
+## Experience
+
+::: {.cv-entry}
+[Inland Norway University of Applied Sciences, Evenstad]{.place} · Teaching Assistant — Resource and Environmental Economics
+[Aug 2023 – Jan 2024]{.date}
+
+- Independently provided weekly guidance and graded approximately 30 assignments in microeconomics and resource economics.
+- Delivered detailed academic explanations that strengthened students' understanding of course material.
+:::
+
+## Projects
+
+::: {.cv-entry}
+[A Comparison of Fundamental and Statistical Risk Factor Models]{.place} · Master's Thesis
+[2026]{.date}
+
+Developed, compared, and evaluated a fundamental multi-factor risk model and a
+statistical factor model for portfolio risk prediction in the Norwegian equity
+market against a naive benchmark, on high-dimensional unbalanced panel data and
+firm characteristics constructed from accounting data, market data, and external
+sources.
+
+- Designed and implemented an ETL pipeline, with point-in-time adjustment of key ratios and currency conversion, for approximately 400 Norwegian equities, including delisted companies to mitigate survivorship bias.
+- Large-scale model estimation using iterated Weighted Least Squares on 1707 daily cross-sections.
+- Performed walk-forward out-of-sample evaluation via predicted global minimum-variance portfolios and Diebold–Mariano testing of loss differentials.
+:::
+
+::: {.cv-entry}
+[Black–Scholes Option Pricing Using Monte Carlo Methods]{.place} · Personal Project
+[2025]{.date}
+
+- Implemented Black–Scholes pricing of European options via Monte Carlo simulation in Python.
+- Verified and investigated convergence to the closed-form solution empirically; standard error decreases with an increasing number of simulations, consistent with the law of large numbers.
+:::
+
+::: {.cv-entry}
+[Beta Compression as a Market Indicator]{.place} · Semester Project
+[2025]{.date}
+
+- Investigated beta compression as a leading indicator of market crashes (Russell 3000, 1990–2025) using logistic regression and the Wald test in R.
+- Critical analysis of look-ahead bias and p-value inflation; limitations documented in the paper.
+:::
+
+## Skills
+
+**Technical:** Python (Pandas, NumPy, SciPy, Statsmodels, Matplotlib, Plotly), R (dplyr, forecast, ggplot2, pcaMethods), SQL (MySQL), Excel, LaTeX
+
+**Languages:** Norwegian (native), English (fluent)
+
+## Activities and interests
+
+Mathematics and statistics · Music production · Strength training
+
+For a detailed breakdown of courses, roles, and projects, see the
+[Extended CV](cv-extended.qmd).
+:::
+
+::: {when-profile="nb"}
+**Siviløkonom | M.Sc. Business Analytics** · Empirisk finans og kvantitativ
+risikomodellering. Ser etter kvantitative roller innen finans og risiko i
+Oslo-området.
+
+## Utdanning
+
+::: {.cv-entry}
+[Høgskolen i Innlandet, Lillehammer]{.place} · MSc Business Analytics
+[Aug 2024 – Jun 2026]{.date}
+
+Relevante emner: finansiell modellering, kvantitative metoder, prognosemodeller,
+maskinlæring, avansert statistisk modellering, effektivitetsanalyse,
+programmering (Python og R), dataintegrasjon (SQL), GDPR.
+:::
+
+::: {.cv-entry}
+[Høgskolen i Innlandet, Rena]{.place} · Årsstudium i bedriftsøkonomi
+[Aug 2022 – Jun 2023]{.date}
+
+Relevante emner: regnskap, investering og finansiering, makro- og mikroøkonomi,
+matematikk for økonomer, statistikk.
+:::
+
+::: {.cv-entry}
+[Høgskolen i Innlandet, Rena]{.place} · Bachelor i Music Business Management
+[Aug 2019 – Jun 2022]{.date}
+:::
+
+## Erfaring
+
+::: {.cv-entry}
+[Høgskolen i Innlandet, Evenstad]{.place} · Læringsassistent — ressurs- og miljøøkonomi
+[Aug 2023 – Jan 2024]{.date}
+
+- Ga selvstendig ukentlig veiledning og rettet om lag 30 innleveringer i mikroøkonomi og ressursøkonomi.
+- Formidlet grundige faglige forklaringer som styrket studentenes forståelse av pensum.
+:::
+
+## Prosjekter
+
+::: {.cv-entry}
+[En sammenligning av fundamentale og statistiske risikofaktormodeller]{.place} · Masteroppgave
+[2026]{.date}
+
+Utviklet, sammenlignet og evaluerte en fundamental multifaktor-risikomodell og
+en statistisk faktormodell for prediksjon av porteføljerisiko i det norske
+aksjemarkedet mot en naiv referansemodell, på høydimensjonale ubalanserte
+paneldata og selskapskarakteristikker konstruert fra regnskapsdata, markedsdata
+og eksterne kilder.
+
+- Designet og implementerte en ETL-pipeline, med point-in-time-justering av nøkkeltall og valutakonvertering, for om lag 400 norske aksjer, inkludert avnoterte selskaper for å redusere overlevelsesskjevhet.
+- Storskala modellestimering med iterert vektet minste kvadraters metode (WLS) på 1707 daglige tverrsnitt.
+- Walk-forward out-of-sample-evaluering via predikerte globale minimum-varians-porteføljer og Diebold–Mariano-testing av tapsdifferanser.
+:::
+
+::: {.cv-entry}
+[Prising av opsjoner med Black–Scholes og Monte Carlo-metoder]{.place} · Personlig prosjekt
+[2025]{.date}
+
+- Implementerte Black–Scholes-prising av europeiske opsjoner via Monte Carlo-simulering i Python.
+- Verifiserte og undersøkte empirisk konvergens mot den lukkede løsningen; standardfeilen avtar med økende antall simuleringer, i tråd med store talls lov.
+:::
+
+::: {.cv-entry}
+[Betakompresjon som markedsindikator]{.place} · Semesterprosjekt
+[2025]{.date}
+
+- Undersøkte betakompresjon som ledende indikator for markedsfall (Russell 3000, 1990–2025) med logistisk regresjon og Wald-test i R.
+- Kritisk analyse av look-ahead-skjevhet og p-verdi-inflasjon; begrensninger dokumentert i oppgaven.
+:::
+
+## Ferdigheter
+
+**Teknisk:** Python (Pandas, NumPy, SciPy, Statsmodels, Matplotlib, Plotly), R (dplyr, forecast, ggplot2, pcaMethods), SQL (MySQL), Excel, LaTeX
+
+**Språk:** Norsk (morsmål), engelsk (flytende)
+
+## Aktiviteter og interesser
+
+Matematikk og statistikk · Musikkproduksjon · Styrketrening
+
+For en detaljert gjennomgang av emner, roller og prosjekter, se
+[Utvidet CV](cv-extended.qmd).
+:::

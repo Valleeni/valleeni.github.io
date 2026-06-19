@@ -1,61 +1,52 @@
-# Akademisk/profesjonell CV-nettside (Quarto)
+# vallee.no — personal CV site (Quarto, bilingual)
 
-Personlig nettside bygget med [Quarto](https://quarto.org): landing page, CV, forskning
-(BibTeX-drevet), og en blogg som støtter kjørbar Python/R med interaktive grafer.
+Minimal academic CV site built with [Quarto](https://quarto.org), in English and
+Norwegian. English is the default language served at the root domain.
 
-## Førstegangsoppsett
+## Structure
 
-1. **Installer Quarto:** last ned fra <https://quarto.org/docs/get-started/>.
-2. **Installer Python-avhengigheter** (for de kjørbare innleggene):
-   ```bash
-   pip install -r requirements.txt
-   ```
-   (For R-innlegg: installer pakkene du bruker, f.eks. `install.packages("ggplot2")`.)
-3. **Bytt ut plassholdere** merket `[Etternavn]`, `dittbrukernavn`, `din@epost.no` i
-   `_quarto.yml`, `index.qmd` og `cv.qmd`. Legg ditt eget bilde i `assets/profile.jpg`.
+```
+_quarto.yml         # base config + profile group (en, nb)
+_quarto-en.yml      # English profile  -> _site/en  (navbar in English)
+_quarto-nb.yml      # Norwegian profile -> _site/nb (navbar in Norwegian)
+index.qmd           # home / about (LinkedIn + e-mail)
+cv.qmd              # CV
+cv-extended.qmd     # detailed CV (courses, roles, projects)
+styles.scss         # theme
+assets/profile.jpg  # portrait
+CNAME               # custom domain
+```
 
-## Lokal forhåndsvisning
+Both languages live in the same `.qmd` files. Content is switched with
+`::: {when-profile="en"} ... :::` and `::: {when-profile="nb"} ... :::` blocks,
+so the two versions stay side by side in one file.
+
+## Build locally
+
+Preview one language at a time:
 
 ```bash
-quarto preview
+quarto preview --profile en
+quarto preview --profile nb
 ```
-Åpner siden i nettleseren og oppdaterer automatisk når du lagrer.
 
-## Lage nytt blogginnlegg
+Render both (what CI does):
 
-Kopier en mappe under `posts/`, gi den nytt navn (f.eks. `posts/2026-03-tittel/`),
-og rediger `index.qmd`. Innlegg med kjørbar kode trenger `jupyter: python3`
-(Python) eller `engine: knitr` (R) i frontmatter. Quarto plukker opp innlegget
-automatisk i listingen.
-
-## Publisering til GitHub Pages
-
-To alternativer:
-
-**A. Automatisk via GitHub Actions (anbefalt — kjører koden i skyen):**
-Workflowen i `.github/workflows/publish.yml` render-er og deployer ved hver push til
-`main`. I repo-innstillingene: *Settings → Pages → Source → GitHub Actions*.
-
-**B. Manuelt fra egen maskin:**
 ```bash
-quarto publish gh-pages
+quarto render --profile en
+quarto render --profile nb
 ```
 
-For en brukerside, kall repoet `dittbrukernavn.github.io` — da blir URL-en
-`https://dittbrukernavn.github.io`.
+## Publish
 
-## Struktur
+Pushing to `main` triggers `.github/workflows/publish.yml`, which renders both
+profiles into `_site/en` and `_site/nb`, writes a root redirect (`/` -> `/en/`)
+and the `CNAME`, and deploys to GitHub Pages.
 
-```
-.
-├── _quarto.yml          # nettstedskonfig + navigasjon
-├── styles.scss          # tema/styling
-├── index.qmd            # landing page
-├── cv.qmd               # CV
-├── research.qmd         # publikasjoner (BibTeX)
-├── blog.qmd             # blogg-listing
-├── references.bib       # referanser
-├── requirements.txt     # Python-avhengigheter
-├── assets/              # bilder, CV-PDF
-└── posts/               # blogginnlegg (én mappe per innlegg)
-```
+Repo settings: *Settings -> Pages -> Source -> GitHub Actions*.
+
+## Language toggle
+
+The navbar "EN"/"NO" link points to `../en/` or `../nb/`. Note: switching
+language always lands on the other language's home page, not the equivalent
+sub-page (a known limitation of the profile approach — fine for a small site).
