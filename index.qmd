@@ -13,19 +13,21 @@ about:
       href: mailto:nicolay@vallee.no
 ---
 
-::: {when-profile="en"}
-**M.Sc. Business Analytics** · Empirical finance and quantitative risk modelling.
-Looking for quantitative roles in finance and risk in the Oslo area.
+::: {.content-visible when-profile="en"}
+**M.Sc. Business Analytics** — econometrics, statistical learning, and
+quantitative finance. Open to roles as a risk analyst, quantitative analyst,
+market analyst, or business analyst in the Oslo area.
 
 ## Education
 
 ::: {.cv-entry}
-[University of Inland Norway, Lillehammer]{.place} · MSc Business Analytics
+[University of Inland Norway, Lillehammer]{.place} · MSc Business Administration — major in Business Analytics (siviløkonom)
 [Aug 2024 – Jun 2026]{.date}
 
-Relevant courses: financial modelling, quantitative methods, forecasting models,
-machine learning, advanced statistical modelling, efficiency analysis,
-programming (Python & R), data integration (SQL), GDPR.
+Relevant courses: applied programming, quantitative methods, machine learning,
+business forecasting, financial modelling, advanced statistical modelling, data
+engineering, business performance / efficiency analysis, and data protection and
+ethics.
 :::
 
 ::: {.cv-entry}
@@ -44,7 +46,7 @@ microeconomics, business calculus, statistics.
 ## Experience
 
 ::: {.cv-entry}
-[Inland Norway University of Applied Sciences, Evenstad]{.place} · Teaching Assistant — Resource and Environmental Economics
+[University of Inland Norway, Evenstad]{.place} · Teaching Assistant — Resource and Environmental Economics
 [Aug 2023 – Jan 2024]{.date}
 
 - Independently provided weekly guidance and graded approximately 30 assignments in microeconomics and resource economics.
@@ -94,28 +96,28 @@ sources.
 
 Mathematics and statistics · Music production · Strength training
 
-For a detailed breakdown of courses, roles, and projects, see the
-[Extended CV](cv-extended.qmd).
+For a detailed breakdown of what each course covered and the competencies it
+builds, see the [Extended CV](cv-extended.qmd).
 :::
 
-::: {when-profile="nb"}
-**Siviløkonom | M.Sc. Business Analytics** · Empirisk finans og kvantitativ
-risikomodellering. Ser etter kvantitative roller innen finans og risiko i
-Oslo-området.
+::: {.content-visible when-profile="nb"}
+**Siviløkonom | M.Sc. Business Analytics** — økonometri, statistisk læring og
+kvantitativ finans. Åpen for roller som risikoanalytiker, kvantitativ
+analytiker, markedsanalytiker eller forretningsanalytiker i Oslo-området.
 
 ## Utdanning
 
 ::: {.cv-entry}
-[Høgskolen i Innlandet, Lillehammer]{.place} · MSc Business Analytics
+[Universitetet i Innlandet, Lillehammer]{.place} · Master i økonomi og ledelse — fordypning i Business Analytics (siviløkonom)
 [Aug 2024 – Jun 2026]{.date}
 
-Relevante emner: finansiell modellering, kvantitative metoder, prognosemodeller,
-maskinlæring, avansert statistisk modellering, effektivitetsanalyse,
-programmering (Python og R), dataintegrasjon (SQL), GDPR.
+Relevante emner: anvendt programmering, kvantitative metoder, maskinlæring,
+prognostisering (forecasting), finansiell modellering, avansert statistisk
+modellering, data engineering, effektivitetsanalyse, og personvern og etikk.
 :::
 
 ::: {.cv-entry}
-[Høgskolen i Innlandet, Rena]{.place} · Årsstudium i bedriftsøkonomi
+[Universitetet i Innlandet, Rena]{.place} · Årsstudium i bedriftsøkonomi
 [Aug 2022 – Jun 2023]{.date}
 
 Relevante emner: regnskap, investering og finansiering, makro- og mikroøkonomi,
@@ -123,14 +125,14 @@ matematikk for økonomer, statistikk.
 :::
 
 ::: {.cv-entry}
-[Høgskolen i Innlandet, Rena]{.place} · Bachelor i Music Business Management
+[Universitetet i Innlandet, Rena]{.place} · Bachelor i Music Business Management
 [Aug 2019 – Jun 2022]{.date}
 :::
 
 ## Erfaring
 
 ::: {.cv-entry}
-[Høgskolen i Innlandet, Evenstad]{.place} · Læringsassistent — ressurs- og miljøøkonomi
+[Universitetet i Innlandet, Evenstad]{.place} · Læringsassistent — ressurs- og miljøøkonomi
 [Aug 2023 – Jan 2024]{.date}
 
 - Ga selvstendig ukentlig veiledning og rettet om lag 30 innleveringer i mikroøkonomi og ressursøkonomi.
@@ -180,6 +182,6 @@ og eksterne kilder.
 
 Matematikk og statistikk · Musikkproduksjon · Styrketrening
 
-For en detaljert gjennomgang av emner, roller og prosjekter, se
-[Utvidet CV](cv-extended.qmd).
+For en detaljert gjennomgang av hva hvert emne dekket og hvilken kompetanse det
+gir, se [Utvidet CV](cv-extended.qmd).
 :::

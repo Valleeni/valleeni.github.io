@@ -1,164 +1,324 @@
 ---
 title: "Extended CV"
 toc: true
-toc-depth: 3
+toc-depth: 2
 ---
 
-::: {when-profile="en"}
+::: {.content-visible when-profile="en"}
 
-A detailed companion to the [CV](index.qmd): what the courses covered, what the
-roles involved, and what I worked on.
+This page expands on the [CV](index.qmd): what each course actually covered and
+the competencies it builds. My degree is a Master in Business Administration
+with a major in Business Analytics (siviløkonom). Much of my foundation in
+empirical and quantitative finance comes from the quantitative, econometrics,
+and finance courses below, together with my master's thesis. I am open to roles
+as a risk analyst, quantitative analyst, market analyst, or business analyst.
+Courses are ordered from the most quantitative to the management subjects.
 
-## Education
+## Master's thesis
 
-### MSc Business Analytics — Inland Norway University of Applied Sciences, Lillehammer {.place}
-[Aug 2024 – Jun 2026]{.date}
+### A Comparison of Fundamental and Statistical Risk Factor Models {.place}
+[MØLBA4900 · 2026]{.date}
 
-A quantitative master's specialising in empirical finance and risk modelling,
-combining econometrics, statistical learning, and programming with applied
-finance. Selected courses:
+Joint master's thesis, carried out with a project partner. We built and
+evaluated a fundamental (characteristic-based, Barra-style) multi-factor risk
+model against a statistical (PCA-based) factor model for covariance estimation
+and global minimum-variance (GMV) portfolio construction on the Oslo Stock
+Exchange, benchmarked against a naive estimator. The work spanned the full
+pipeline, from raw data to out-of-sample statistical testing.
 
-- **Financial modelling.** Arbitrage pricing, forward and futures pricing, put–call parity, and option strategies (e.g. spreads). Implemented pricing models and verified theoretical relationships numerically.
-- **Quantitative methods / Advanced statistical modelling.** Regression and inference on cross-sectional and panel data, hypothesis testing, and the assumptions and failure modes of linear models. Emphasis on interpreting estimates critically rather than mechanically.
-- **Forecasting models.** Time-series modelling and out-of-sample evaluation, including the distinction between in-sample fit and genuine predictive performance.
-- **Machine learning.** Supervised and unsupervised methods, regularisation, and the bias–variance trade-off, with attention to overfitting and honest validation.
-- **Efficiency analysis.** Frontier methods for benchmarking relative performance across units.
-- **Programming (Python & R).** Building end-to-end data and modelling pipelines: data acquisition, cleaning, transformation, estimation, and reporting.
-- **Data integration (SQL).** Relational data modelling and querying for analytics.
-- **GDPR.** Data-protection principles relevant to handling personal and firm data.
+**Data universe and cleaning (Python, EODHD API).**
 
-### One-Year Programme in Business Economics — Inland Norway University of Applied Sciences, Rena {.place}
-[Aug 2022 – Jun 2023]{.date}
+- Collected unadjusted and adjusted close prices for listed *and* delisted companies to mitigate survivorship bias, using unadjusted prices for feature construction (adjusted prices embed look-ahead bias from future corporate actions) and adjusted prices for returns.
+- Cleaned the universe: detected and resolved renamed/duplicate tickers via excessive-correlation checks, flagged and dropped corrupt price series and unexplained outliers, and documented every removed ticker with a reason.
+- Handled currency consistently: identified time-series and reporting currencies, manually verified missing balance-sheet currencies against published reports, and mapped historical FX pairs to convert everything to NOK.
 
-A conversion year building the economics and quantitative foundation for the
-master's: accounting, investment and finance, macro- and microeconomics,
-business calculus, and statistics.
+**Factor construction (point-in-time).**
 
-### Bachelor in Music Business Management — Inland Norway University of Applied Sciences, Rena {.place}
-[Aug 2019 – Jun 2022]{.date}
+- Built around eleven firm characteristics with point-in-time arrival of accounting information: value (book-to-market), size (log market cap), momentum, short-term reversal, CAPM idiosyncratic volatility, Amihud illiquidity, dividend yield, market beta, oil-price beta (Brent futures), interest-rate / yield-spread sensitivity, leverage (debt-to-assets), and asset growth, plus GICS sector mapping.
 
-An interdisciplinary business degree in the creative industries, covering
-management, marketing, contracts, and project work — the starting point for a
-deliberate pivot toward quantitative finance.
+**Estimation and diagnostics (R).**
 
-## Experience
+- Estimated the fundamental model as a sequence of market-cap-weighted cross-sectional WLS regressions (one per trading day) to recover factor returns, with per-cross-section winsorization, and formed the covariance as $B\,\Sigma_f\,B' + D$ with EWMA-smoothed idiosyncratic variance.
+- Ran diagnostics: factor-return series, average $R^2$, variance-inflation (VIF) checks for multicollinearity, and ADF stationarity tests.
+- Estimated the statistical model by EWMA-weighted rolling PCA, with the number of factors chosen by Bai–Ng information criteria.
 
-### Teaching Assistant — Resource and Environmental Economics {.place}
-[Inland Norway University of Applied Sciences, Evenstad · Aug 2023 – Jan 2024]{.date}
+**Out-of-sample evaluation.**
 
-Supported the teaching of an undergraduate course in resource and environmental
-economics.
+- Constructed predicted GMV portfolios from each model's covariance in a walk-forward design, tracked realised variance, and tested loss differentials with the Diebold–Mariano test (including a stationarity check on the differentials).
+- Result: the two model families were statistically indistinguishable over the full out-of-sample period — interpreted, in light of the estimation-error literature, as a substantive finding about a small market rather than a non-result.
 
-- Held weekly guidance sessions, working through problem sets and clarifying core microeconomic concepts (optimisation, externalities, resource allocation over time).
-- Graded approximately 30 assignments per round, giving written feedback aimed at improving students' reasoning rather than only marking answers.
-- Worked independently with responsibility for a recurring part of the course delivery.
+## Quantitative and technical courses
 
-## Selected projects
+### Financial modelling {.place}
+[MØLBA3005 · A]{.date}
 
-### Master's thesis — fundamental vs. statistical risk factor models {.place}
-[2026]{.date}
+Portfolio theory and risk diversification; empirical tests of the Efficient
+Market Hypothesis and CAPM; capital structure and the optimal financing mix;
+valuation principles and practice; forwards, futures and options; and modelling
+of volatility and correlation — implied and realised volatility, and volatility
+forecasting with ARCH, GARCH, HAR-RV and quantile regression. Develops the
+ability to price derivatives under the no-arbitrage principle, apply Monte Carlo
+simulation to option pricing, measure portfolio risk with several approaches,
+value firms and equity, and implement trading strategies.
 
-Compared a fundamental (characteristic-based) multi-factor risk model against a
-statistical (PCA-based) factor model for covariance estimation and
-minimum-variance portfolio construction on the Oslo Stock Exchange.
+### Quantitative methods & advanced statistical modelling {.place}
+[LMSM130 (A) · MØLBA3007 (B)]{.date}
 
-- **Data pipeline.** Built an ETL pipeline for roughly 400 Norwegian equities — including delisted firms to limit survivorship bias — with point-in-time adjustment of accounting ratios and currency conversion to a common unit.
-- **Estimation.** Estimated the fundamental model by iterated Weighted Least Squares across 1707 daily cross-sections; estimated the statistical model by rolling principal component analysis.
-- **Evaluation.** Compared the two via predicted global minimum-variance portfolios in a walk-forward, out-of-sample design, testing realised loss differentials with the Diebold–Mariano test.
-- **Result.** The two model families were statistically indistinguishable over the full out-of-sample period — interpreted, in light of the estimation-error literature, as a substantive finding about a small market rather than a non-result.
+A two-course econometrics sequence: research design and the assumptions and
+interpretation of multiple linear regression; logistic regression;
+instrumental-variables regression; panel-data models; exploratory and
+confirmatory factor analysis; and, at the advanced level, endogeneity, models
+for limited dependent variables, and partial least squares structural equation
+modelling (PLS-SEM). Develops the ability to test OLS assumptions, distinguish
+predictive from causal interpretations, justify a methodology from its
+underlying assumptions, and design and run advanced empirical studies on
+business, economic and financial data.
 
-### Black–Scholes option pricing via Monte Carlo {.place}
-[2025]{.date}
+### Machine learning {.place}
+[MØLBA3002 · B]{.date}
 
-Implemented Monte Carlo pricing of European options in Python and verified
-convergence to the Black–Scholes closed form, showing the standard error shrink
-with the number of simulations in line with the law of large numbers.
+Supervised learning framed around minimising expected loss for optimal
+decisions: regression methods (linear regression, neural networks);
+classification (logistic regression, discriminant analysis, naive Bayes);
+performance evaluation; the bias–variance trade-off; model selection and
+averaging; regularization; and cross-validation and the bootstrap. Develops the
+ability to implement and evaluate machine-learning algorithms and to make
+qualified method choices for a given problem.
 
-### Beta compression as a market indicator {.place}
-[2025]{.date}
+### Business forecasting {.place}
+[MØLBA3004 · A]{.date}
 
-Tested whether compression in the cross-sectional dispersion of betas precedes
-market crashes (Russell 3000, 1990–2025) using logistic regression and the Wald
-test in R, with explicit treatment of look-ahead bias and p-value inflation as
-limitations.
+Time-series data patterns and decomposition into trend, cycle, season and noise;
+moving averages and exponential smoothing; dynamic regression; ARIMA;
+multivariate time series such as vector autoregression; advanced methods
+including neural networks and state-space models; forecast combination; and loss
+functions, forecast accuracy and optimality. Develops the ability to generate
+and evaluate forecasts, combine them to improve accuracy, and recognise the
+conditions under which models break.
+
+### Applied programming {.place}
+[LDBA200 · A]{.date}
+
+Core programming concepts; variable types and data structures; functions, loops,
+assignments, subsetting and conditionals; algorithmic thinking; tooling for data
+wrangling, descriptive analysis, testing and visualization; debugging; and
+documentation, reproducibility and automation. Develops the ability to write
+programs that solve business problems and to produce reproducible scripts and
+dynamic reports.
+
+### Data engineering {.place}
+[MØLBA3001 · B]{.date}
+
+Capturing, cleaning, transforming and loading data: data types, structures and
+sources; data acquisition; storage in databases and data warehouses; SQL; cloud
+solutions and programming interfaces; the peculiarities of Big Data; and the
+role of data management in creating business value. Develops the ability to
+extract, transform and merge data with SQL and to access local and web-based
+sources.
+
+### Business performance / efficiency analysis {.place}
+[MØLBA3003 · B]{.date}
+
+Measuring and benchmarking firm performance: identifying inputs and outputs;
+using determinants and environmental variables to capture heterogeneity between
+firms; efficiency analysis with both parametric and non-parametric methods;
+optimization methods; productivity analysis and indices; and benchmarking.
+Develops the ability to conduct productivity and efficiency analyses and to
+recommend actions to improve performance.
+
+### Data protection and ethics {.place}
+[MØLBA3008 · C]{.date}
+
+Privacy and data protection; the GDPR and privacy by design; data
+classification and transfer; the EEA obligations and rules on cross-border data
+transfer; and the ethical paradoxes of big-data analytics. Develops the ability
+to identify privacy and legal risks and to manage data within regulation and
+ethical standards.
+
+## Management and business courses
+
+### Management accounting and control {.place}
+[LMØS120 · C]{.date}
+
+Traditional and modern approaches to management accounting and the link between
+strategy and financial management; budgets, forecasts, residual income models,
+the balanced scorecard, activity-based costing and cost targeting; performance
+measurement and management; and the changing role of the control function under
+digitalization.
+
+### Strategy and leadership {.place}
+[LMMF120 · B]{.date}
+
+Strategy as an academic field and strategic processes; the digital influence on
+strategy; market and competition positioning; the leadership role and digital
+transformation; competitor and environmental analysis; network strategies;
+incentive systems and performance metrics; and ethics and social responsibility.
+
+### Sustainable business model innovation {.place}
+[INN3024 · C]{.date}
+
+Designing business models that align economic, social and environmental goal
+attainment; analysing business models and corporate responsibility through case
+studies of Norwegian and international firms; and moving beyond the traditional
+responsibility–profitability trade-off.
 
 :::
 
-::: {when-profile="nb"}
+::: {.content-visible when-profile="nb"}
 
-En detaljert utdyping av [CV-en](index.qmd): hva emnene inneholdt, hva rollene gikk
-ut på, og hva jeg har jobbet med.
+Denne siden utdyper [CV-en](index.qmd): hva hvert emne faktisk dekket og hvilken
+kompetanse det gir. Graden min er en master i økonomi og ledelse med fordypning
+i Business Analytics (siviløkonom). Mye av grunnlaget mitt i empirisk og
+kvantitativ finans kommer fra de kvantitative emnene, økonometri- og
+finansemnene under, sammen med masteroppgaven. Jeg er åpen for roller som
+risikoanalytiker, kvantitativ analytiker, markedsanalytiker eller
+forretningsanalytiker. Emnene er sortert fra det mest kvantitative til
+ledelsesfagene.
 
-## Utdanning
+## Masteroppgave
 
-### MSc Business Analytics (siviløkonom) — Høgskolen i Innlandet, Lillehammer {.place}
-[Aug 2024 – Jun 2026]{.date}
+### En sammenligning av fundamentale og statistiske risikofaktormodeller {.place}
+[MØLBA4900 · 2026]{.date}
 
-En kvantitativ master med spesialisering i empirisk finans og risikomodellering,
-som kombinerer økonometri, statistisk læring og programmering med anvendt
-finans. Utvalgte emner:
+Felles masteroppgave, gjennomført med en medstudent. Vi bygde og evaluerte en
+fundamental (karakteristikk-basert, Barra-stil) multifaktor-risikomodell mot en
+statistisk (PCA-basert) faktormodell for kovariansestimering og konstruksjon av
+globale minimum-varians-porteføljer (GMV) på Oslo Børs, målt mot en naiv
+estimator. Arbeidet dekket hele pipelinen, fra rådata til out-of-sample
+statistisk testing.
 
-- **Finansiell modellering.** Arbitrasjeprising, prising av forwards og futures, put–call-paritet og opsjonsstrategier (f.eks. spreads). Implementerte prisingsmodeller og verifiserte teoretiske sammenhenger numerisk.
-- **Kvantitative metoder / avansert statistisk modellering.** Regresjon og inferens på tverrsnitts- og paneldata, hypotesetesting, og forutsetningene og svakhetene i lineære modeller. Vekt på kritisk tolkning av estimater fremfor mekanisk bruk.
-- **Prognosemodeller.** Tidsseriemodellering og out-of-sample-evaluering, inkludert skillet mellom in-sample-tilpasning og reell prediktiv evne.
-- **Maskinlæring.** Veiledet og ikke-veiledet læring, regularisering og bias–varians-avveiingen, med oppmerksomhet på overtilpasning og ærlig validering.
-- **Effektivitetsanalyse.** Frontmetoder for å sammenligne relativ ytelse på tvers av enheter.
-- **Programmering (Python og R).** Bygging av komplette data- og modelleringspipelines: innhenting, rensing, transformasjon, estimering og rapportering.
-- **Dataintegrasjon (SQL).** Relasjonell datamodellering og spørringer for analyse.
-- **GDPR.** Personvernprinsipper relevant for håndtering av person- og selskapsdata.
+**Dataunivers og rensing (Python, EODHD API).**
 
-### Årsstudium i bedriftsøkonomi — Høgskolen i Innlandet, Rena {.place}
-[Aug 2022 – Jun 2023]{.date}
+- Hentet ujusterte og justerte sluttkurser for både noterte og avnoterte selskaper for å redusere overlevelsesskjevhet, brukte ujusterte priser til faktorkonstruksjon (justerte priser inneholder look-ahead-skjevhet fra fremtidige selskapshendelser) og justerte priser til avkastning.
+- Renset universet: oppdaget og løste omdøpte/dupliserte tickere via korrelasjonskontroller, flagget og fjernet korrupte prisserier og uforklarte outliere, og dokumenterte hver fjernede ticker med begrunnelse.
+- Håndterte valuta konsistent: identifiserte tidsserie- og rapporteringsvaluta, verifiserte manglende balansevaluta manuelt mot publiserte rapporter, og mappet historiske valutapar for å konvertere alt til NOK.
 
-Et påbyggingsår som la det økonomiske og kvantitative grunnlaget for masteren:
-regnskap, investering og finansiering, makro- og mikroøkonomi, matematikk for
-økonomer og statistikk.
+**Faktorkonstruksjon (point-in-time).**
 
-### Bachelor i Music Business Management — Høgskolen i Innlandet, Rena {.place}
-[Aug 2019 – Jun 2022]{.date}
+- Bygde rundt elleve selskapskarakteristikker med point-in-time-ankomst av regnskapsinformasjon: verdi (book-to-market), størrelse (log markedsverdi), momentum, kortsiktig reversering, CAPM idiosynkratisk volatilitet, Amihud-illikviditet, dividendeyield, markedsbeta, oljeprisbeta (Brent futures), rente-/yieldspread-sensitivitet, gjeldsgrad (debt-to-assets) og aktivavekst, pluss GICS-sektormapping.
 
-En tverrfaglig økonomiutdanning rettet mot kreative næringer — ledelse,
-markedsføring, kontrakter og prosjektarbeid — og utgangspunktet for en bevisst
-dreining mot kvantitativ finans.
+**Estimering og diagnostikk (R).**
 
-## Erfaring
+- Estimerte den fundamentale modellen som en sekvens av markedsverdivektede tverrsnitts-WLS-regresjoner (én per handelsdag) for å hente ut faktoravkastninger, med winsorisering per tverrsnitt, og dannet kovariansen som $B\,\Sigma_f\,B' + D$ med EWMA-glattet idiosynkratisk varians.
+- Kjørte diagnostikk: faktoravkastningsserier, gjennomsnittlig $R^2$, variance-inflation (VIF) for multikollinearitet, og ADF-tester for stasjonaritet.
+- Estimerte den statistiske modellen med EWMA-vektet rullerende PCA, der antall faktorer ble valgt med Bai–Ng-informasjonskriterier.
 
-### Læringsassistent — ressurs- og miljøøkonomi {.place}
-[Høgskolen i Innlandet, Evenstad · Aug 2023 – Jan 2024]{.date}
+**Out-of-sample-evaluering.**
 
-Bidro i undervisningen av et bacheloremne i ressurs- og miljøøkonomi.
+- Konstruerte predikerte GMV-porteføljer fra hver modells kovarians i et walk-forward-design, fulgte realisert varians, og testet tapsdifferanser med Diebold–Mariano-testen (inkludert en stasjonaritetskontroll på differensialene).
+- Resultat: de to modellfamiliene var statistisk uskillbare over hele out-of-sample-perioden — tolket, i lys av litteraturen om estimeringsfeil, som et substansielt funn om et lite marked snarere enn et ikke-resultat.
 
-- Holdt ukentlige veiledningsøkter der jeg gikk gjennom oppgavesett og klargjorde sentrale mikroøkonomiske begreper (optimering, eksternaliteter, ressursallokering over tid).
-- Rettet om lag 30 innleveringer per runde, med skriftlig tilbakemelding rettet mot å forbedre studentenes resonnement, ikke bare å sette karakter.
-- Jobbet selvstendig med ansvar for en fast del av emnegjennomføringen.
+## Kvantitative og tekniske emner
 
-## Utvalgte prosjekter
+### Finansiell modellering {.place}
+[MØLBA3005 · A]{.date}
 
-### Masteroppgave — fundamentale vs. statistiske risikofaktormodeller {.place}
-[2026]{.date}
+Porteføljeteori og risikodiversifisering; empiriske tester av
+markedseffisienshypotesen og CAPM; kapitalstruktur og optimal finansieringsmiks;
+verdsettelse i prinsipp og praksis; forwards, futures og opsjoner; og modellering
+av volatilitet og korrelasjon — implisitt og realisert volatilitet, og
+volatilitetsprognoser med ARCH, GARCH, HAR-RV og kvantilregresjon. Bygger evnen
+til å prise derivater under no-arbitrage-prinsippet, anvende Monte
+Carlo-simulering til opsjonsprising, måle porteføljerisiko med flere metoder,
+verdsette selskaper og egenkapital, og implementere handelsstrategier.
 
-Sammenlignet en fundamental (karakteristikk-basert) multifaktor-risikomodell mot
-en statistisk (PCA-basert) faktormodell for kovariansestimering og konstruksjon
-av minimum-varians-porteføljer på Oslo Børs.
+### Kvantitative metoder og avansert statistisk modellering {.place}
+[LMSM130 (A) · MØLBA3007 (B)]{.date}
 
-- **Datapipeline.** Bygde en ETL-pipeline for om lag 400 norske aksjer — inkludert avnoterte selskaper for å begrense overlevelsesskjevhet — med point-in-time-justering av regnskapsnøkkeltall og valutakonvertering til en felles enhet.
-- **Estimering.** Estimerte den fundamentale modellen med iterert vektet minste kvadraters metode over 1707 daglige tverrsnitt; estimerte den statistiske modellen med rullerende prinsipalkomponentanalyse.
-- **Evaluering.** Sammenlignet de to via predikerte globale minimum-varians-porteføljer i et walk-forward out-of-sample-design, og testet realiserte tapsdifferanser med Diebold–Mariano-testen.
-- **Resultat.** De to modellfamiliene var statistisk uskillbare over hele out-of-sample-perioden — tolket, i lys av litteraturen om estimeringsfeil, som et substansielt funn om et lite marked snarere enn et ikke-resultat.
+En økonometrisekvens over to emner: forskningsdesign og forutsetningene for og
+tolkningen av multippel lineær regresjon; logistisk regresjon;
+instrumentvariabelregresjon; paneldatamodeller; eksplorerende og bekreftende
+faktoranalyse; og, på det avanserte nivået, endogenitet, modeller for begrensede
+avhengige variabler, og partial least squares structural equation modelling
+(PLS-SEM). Bygger evnen til å teste OLS-forutsetninger, skille prediktiv fra
+kausal tolkning, begrunne metodevalg ut fra de underliggende forutsetningene, og
+designe og gjennomføre avanserte empiriske studier på data fra næringsliv,
+økonomi og finans.
 
-### Opsjonsprising med Black–Scholes og Monte Carlo {.place}
-[2025]{.date}
+### Maskinlæring {.place}
+[MØLBA3002 · B]{.date}
 
-Implementerte Monte Carlo-prising av europeiske opsjoner i Python og verifiserte
-konvergens mot den lukkede Black–Scholes-løsningen, der standardfeilen avtar med
-antall simuleringer i tråd med store talls lov.
+Veiledet læring rammet inn rundt minimering av forventet tap for optimale
+beslutninger: regresjonsmetoder (lineær regresjon, nevrale nett); klassifisering
+(logistisk regresjon, diskriminantanalyse, naive Bayes); ytelsesevaluering;
+bias–varians-avveiingen; modellseleksjon og -gjennomsnitt; regularisering; og
+kryssvalidering og bootstrap. Bygger evnen til å implementere og evaluere
+maskinlæringsalgoritmer og gjøre kvalifiserte metodevalg for et gitt problem.
 
-### Betakompresjon som markedsindikator {.place}
-[2025]{.date}
+### Business forecasting {.place}
+[MØLBA3004 · A]{.date}
 
-Testet om kompresjon i tverrsnittsspredningen av betaer går forut for
-markedsfall (Russell 3000, 1990–2025), med logistisk regresjon og Wald-test i R,
-og med eksplisitt behandling av look-ahead-skjevhet og p-verdi-inflasjon som
-begrensninger.
+Mønstre i tidsseriedata og dekomponering i trend, sykel, sesong og støy;
+glidende gjennomsnitt og eksponentiell glatting; dynamisk regresjon; ARIMA;
+multivariate tidsserier som vektorautoregresjon; avanserte metoder inkludert
+nevrale nett og tilstandsromsmodeller; prognosekombinasjon; og tapsfunksjoner,
+prognosenøyaktighet og optimalitet. Bygger evnen til å lage og evaluere
+prognoser, kombinere dem for bedre nøyaktighet, og gjenkjenne forholdene der
+modeller bryter sammen.
+
+### Anvendt programmering {.place}
+[LDBA200 · A]{.date}
+
+Sentrale programmeringskonsepter; variabeltyper og datastrukturer; funksjoner,
+løkker, tilordninger, subsetting og betingelser; algoritmisk tenkning; verktøy
+for data wrangling, deskriptiv analyse, testing og visualisering; debugging; og
+dokumentasjon, reproduserbarhet og automatisering. Bygger evnen til å skrive
+programmer som løser forretningsproblemer og lage reproduserbare skript og
+dynamiske rapporter.
+
+### Data engineering {.place}
+[MØLBA3001 · B]{.date}
+
+Innhenting, rensing, transformering og lasting av data: datatyper, -strukturer
+og -kilder; datainnhenting; lagring i databaser og datavarehus; SQL;
+skyløsninger og programmeringsgrensesnitt; særtrekk ved Big Data; og rollen
+datahåndtering spiller i verdiskaping. Bygger evnen til å hente ut, transformere
+og slå sammen data med SQL og å hente lokale og web-baserte kilder.
+
+### Effektivitetsanalyse / business performance {.place}
+[MØLBA3003 · B]{.date}
+
+Måling og benchmarking av virksomheters ytelse: identifisering av innsatsfaktorer
+og produkter; bruk av determinanter og miljøvariabler for å fange heterogenitet
+mellom selskaper; effektivitetsanalyse med både parametriske og ikke-parametriske
+metoder; optimeringsmetoder; produktivitetsanalyse og indekser; og benchmarking.
+Bygger evnen til å gjennomføre produktivitets- og effektivitetsanalyser og
+anbefale tiltak for å forbedre ytelsen.
+
+### Personvern og etikk {.place}
+[MØLBA3008 · C]{.date}
+
+Personvern og databeskyttelse; GDPR og innebygd personvern; dataklassifisering og
+-overføring; EØS-forpliktelser og regler for grensekryssende dataoverføring; og
+de etiske paradoksene ved big data-analyse. Bygger evnen til å identifisere
+personvern- og juridisk risiko og håndtere data innenfor regelverk og etiske
+standarder.
+
+## Ledelses- og økonomifag
+
+### Økonomistyring (management accounting and control) {.place}
+[LMØS120 · C]{.date}
+
+Tradisjonelle og moderne tilnærminger til økonomistyring og koblingen mellom
+strategi og økonomisk styring; budsjetter, prognoser, residualinntektsmodeller,
+balansert målstyring, aktivitetsbasert kalkulasjon og målkostnad;
+prestasjonsmåling og -styring; og den endrede rollen til styringsfunksjonen under
+digitalisering.
+
+### Strategi og ledelse {.place}
+[LMMF120 · B]{.date}
+
+Strategi som akademisk felt og strategiske prosesser; digital påvirkning på
+strategi; markeds- og konkurranseposisjonering; lederrollen og digital
+transformasjon; konkurrent- og omgivelsesanalyse; nettverksstrategier;
+insentivsystemer og prestasjonsmål; og etikk og samfunnsansvar.
+
+### Sustainable business model innovation {.place}
+[INN3024 · C]{.date}
+
+Design av forretningsmodeller som forener økonomisk, sosial og miljømessig
+måloppnåelse; analyse av forretningsmodeller og samfunnsansvar gjennom case fra
+norske og internasjonale selskaper; og hvordan komme forbi den tradisjonelle
+avveiingen mellom ansvar og lønnsomhet.
 
 :::
