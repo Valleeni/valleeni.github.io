@@ -14,9 +14,8 @@ about:
 ---
 
 ::: {.content-visible when-profile="en"}
-**M.Sc. Business Analytics** — econometrics, statistical learning, and
-quantitative finance. Open to roles as a risk analyst, quantitative analyst,
-market analyst, or business analyst in the Oslo area.
+**M.Sc. Business Analytics**, with an analytical and quantitative background in business,
+economics, statistics, and programming. 
 
 ## Education
 
@@ -101,9 +100,8 @@ builds, see the [Extended CV](cv-extended.qmd).
 :::
 
 ::: {.content-visible when-profile="nb"}
-**Siviløkonom | M.Sc. Business Analytics** — økonometri, statistisk læring og
-kvantitativ finans. Åpen for roller som risikoanalytiker, kvantitativ
-analytiker, markedsanalytiker eller forretningsanalytiker i Oslo-området.
+**Siviløkonom | M.Sc. Business Analytics**, med analytisk og tallorientert
+bakgrunn fra økonomi, statistikk og programmering.
 
 ## Utdanning
 
