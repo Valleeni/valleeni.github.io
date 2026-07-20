@@ -6,13 +6,11 @@ toc-depth: 2
 
 ::: {.content-visible when-profile="en"}
 
-This page expands on the [CV](index.qmd): what each course actually covered and
-the competencies it builds. My degree is a Master in Business Administration
-with a major in Business Analytics (siviløkonom). Much of my foundation in
-empirical and quantitative finance comes from the quantitative, econometrics,
-and finance courses below, together with my master's thesis. I am open to roles
-as a risk analyst, quantitative analyst, market analyst, or business analyst.
-Courses are ordered from the most quantitative to the management subjects.
+This page expands on the CV: what each course actually covered and the
+competencies it builds. My degree is a Master in Business Administration with
+a major in Business Analytics (siviløkonom). I have a particular interest in
+machine learning, applied forecasting, and turning data into insight,
+reflected in the courses below and in my master's thesis. 
 
 ## Master's thesis
 
@@ -166,14 +164,11 @@ responsibility–profitability trade-off.
 
 ::: {.content-visible when-profile="nb"}
 
-Denne siden utdyper [CV-en](index.qmd): hva hvert emne faktisk dekket og hvilken
-kompetanse det gir. Graden min er en master i økonomi og ledelse med fordypning
-i Business Analytics (siviløkonom). Mye av grunnlaget mitt i empirisk og
-kvantitativ finans kommer fra de kvantitative emnene, økonometri- og
-finansemnene under, sammen med masteroppgaven. Jeg er åpen for roller som
-risikoanalytiker, kvantitativ analytiker, markedsanalytiker eller
-forretningsanalytiker. Emnene er sortert fra det mest kvantitative til
-ledelsesfagene.
+Denne siden utdyper CV-en: hva hvert emne faktisk dekket og hvilken kompetanse
+det gir. Graden min er en master i økonomi og ledelse med fordypning i Business
+Analytics (siviløkonom). Jeg er særlig interessert i maskinlæring, anvendt
+prognostisering og å omsette data til innsikt, dette gjenspeiles i emnene
+under og i masteroppgaven. 
 
 ## Masteroppgave
 
