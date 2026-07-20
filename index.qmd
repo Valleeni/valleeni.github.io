@@ -22,19 +22,11 @@ economics, statistics, and programming.
 ::: {.cv-entry}
 [University of Inland Norway, Lillehammer]{.place} · MSc Business Administration — major in Business Analytics (siviløkonom)
 [Aug 2024 – Jun 2026]{.date}
-
-Relevant courses: applied programming, quantitative methods, machine learning,
-business forecasting, financial modelling, advanced statistical modelling, data
-engineering, business performance / efficiency analysis, and data protection and
-ethics.
 :::
 
 ::: {.cv-entry}
 [University of Inland Norway, Rena]{.place} · One-Year Programme in Business Economics
 [Aug 2022 – Jun 2023]{.date}
-
-Relevant courses: accounting, investment and finance, macro- and
-microeconomics, business calculus, statistics.
 :::
 
 ::: {.cv-entry}
@@ -108,18 +100,11 @@ bakgrunn fra økonomi, statistikk og programmering.
 ::: {.cv-entry}
 [Universitetet i Innlandet, Lillehammer]{.place} · Master i økonomi og ledelse — fordypning i Business Analytics (siviløkonom)
 [Aug 2024 – Jun 2026]{.date}
-
-Relevante emner: anvendt programmering, kvantitative metoder, maskinlæring,
-prognostisering (forecasting), finansiell modellering, avansert statistisk
-modellering, data engineering, effektivitetsanalyse, og personvern og etikk.
 :::
 
 ::: {.cv-entry}
 [Universitetet i Innlandet, Rena]{.place} · Årsstudium i bedriftsøkonomi
 [Aug 2022 – Jun 2023]{.date}
-
-Relevante emner: regnskap, investering og finansiering, makro- og mikroøkonomi,
-matematikk for økonomer, statistikk.
 :::
 
 ::: {.cv-entry}
