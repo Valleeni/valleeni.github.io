@@ -8,6 +8,9 @@ about:
     - icon: linkedin
       text: LinkedIn
       href: https://www.linkedin.com/in/nicolay-vallee-81031b137/
+    - icon: github
+      text: GitHub
+      href: https://github.com/Valleeni
     - icon: envelope
       text: E-mail
       href: mailto:nicolay@vallee.no
