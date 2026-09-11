@@ -15,7 +15,7 @@ website:
         text: Utvidet CV
     right:
       - href: ../en/
-        text: "EN"
+        text: "🇬🇧 EN"
         aria-label: English version
       - icon: linkedin
         href: https://www.linkedin.com/in/nicolay-vallee-81031b137/
