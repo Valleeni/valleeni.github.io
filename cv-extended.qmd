@@ -14,7 +14,7 @@ reflected in the courses below and in my master's thesis.
 
 ## Master's thesis
 
-### A Comparison of Fundamental and Statistical Risk Factor Models {.place}
+### A Comparison of Characteristic and Statistical Risk Factor Models {.place}
 [MØLBA4900 · 2026]{.date}
 
 Joint master's thesis, carried out with a project partner. We built and
@@ -172,7 +172,7 @@ under og i masteroppgaven.
 
 ## Masteroppgave
 
-### En sammenligning av fundamentale og statistiske risikofaktormodeller {.place}
+### En sammenligning av karakteristiske og statistiske risikofaktormodeller {.place}
 [MØLBA4900 · 2026]{.date}
 
 Felles masteroppgave, gjennomført med en medstudent. Vi bygde og evaluerte en
