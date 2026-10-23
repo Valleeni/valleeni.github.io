@@ -118,7 +118,7 @@ bakgrunn fra økonomi, statistikk og programmering.
 ## Erfaring
 
 ::: {.cv-entry}
-[Universitetet i Innlandet, Evenstad]{.place} · Læringsassistent — ressurs- og miljøøkonomi
+[Universitetet i Innlandet, Evenstad]{.place} · Øvingslærer — ressurs- og miljøøkonomi
 [aug 2023 – jan 2024]{.date}
 
 - Ga selvstendig ukentlig veiledning og rettet om lag 30 innleveringer i mikroøkonomi og ressursøkonomi.
