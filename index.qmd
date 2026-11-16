@@ -40,6 +40,14 @@ economics, statistics, and programming.
 ## Experience
 
 ::: {.cv-entry}
+[Dressmann AS]{.place} · Sales Associate (On-call / fixed parte-time 73%)
+[Aug 2023 – Jan 2024]{.date}
+
+- Contributed to winning Store of the Year in Innlandet (2025) through meeting short- and long-term KPI expectations set by corporate.
+
+:::
+
+::: {.cv-entry}
 [University of Inland Norway, Evenstad]{.place} · Teaching Assistant — Resource and Environmental Economics
 [Aug 2023 – Jan 2024]{.date}
 
