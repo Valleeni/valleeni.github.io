@@ -7,7 +7,7 @@ about:
   links:
     - icon: linkedin
       text: LinkedIn
-      href: https://www.linkedin.com/in/nicolay-vallee-81031b137/
+      href: https://www.linkedin.com/in/nicolayvallee/
     - icon: github
       text: GitHub
       href: https://github.com/Valleeni
