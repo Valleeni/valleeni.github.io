@@ -23,17 +23,17 @@ economics, statistics, and programming.
 ## Education
 
 ::: {.cv-entry}
-[University of Inland Norway, Lillehammer]{.place} · MSc Business Administration — major in Business Analytics (siviløkonom)
+[University of Inland Norway]{.place} · MSc Business Administration — major in Business Analytics
 [Aug 2024 – Jun 2026]{.date}
 :::
 
 ::: {.cv-entry}
-[University of Inland Norway, Rena]{.place} · One-Year Programme in Business Economics
+[University of Inland Norway]{.place} · One-Year Programme in Business Economics
 [Aug 2022 – Jun 2023]{.date}
 :::
 
 ::: {.cv-entry}
-[University of Inland Norway, Rena]{.place} · Bachelor in Music Business Management
+[University of Inland Norway]{.place} · Bachelor in Music Business Management
 [Aug 2019 – Jun 2022]{.date}
 :::
 
@@ -48,7 +48,7 @@ economics, statistics, and programming.
 :::
 
 ::: {.cv-entry}
-[University of Inland Norway, Evenstad]{.place} · Teaching Assistant — Resource and Environmental Economics
+[University of Inland Norway]{.place} · Teaching Assistant
 [Aug 2023 – Jan 2024]{.date}
 
 - Independently provided weekly guidance and graded approximately 30 assignments in microeconomics and resource economics.
@@ -109,24 +109,24 @@ bakgrunn fra økonomi, statistikk og programmering.
 ## Utdanning
 
 ::: {.cv-entry}
-[Universitetet i Innlandet, Lillehammer]{.place} · Master i økonomi og ledelse — fordypning i Business Analytics (siviløkonom)
+[Universitetet i Innlandet]{.place} · Master i økonomi og ledelse — fordypning i Business Analytics (siviløkonom)
 [aug 2024 – jun 2026]{.date}
 :::
 
 ::: {.cv-entry}
-[Universitetet i Innlandet, Rena]{.place} · Årsstudium i bedriftsøkonomi
+[Universitetet i Innlandet]{.place} · Årsstudium i bedriftsøkonomi
 [aug 2022 – jun 2023]{.date}
 :::
 
 ::: {.cv-entry}
-[Universitetet i Innlandet, Rena]{.place} · Bachelor i Music Business Management
+[Universitetet i Innlandet]{.place} · Bachelor i Music Business Management
 [aug 2019 – jun 2022]{.date}
 :::
 
 ## Erfaring
 
 ::: {.cv-entry}
-[Universitetet i Innlandet, Evenstad]{.place} · Øvingslærer — ressurs- og miljøøkonomi
+[Universitetet i Innlandet]{.place} · Øvingslærer
 [aug 2023 – jan 2024]{.date}
 
 - Ga selvstendig ukentlig veiledning og rettet om lag 30 innleveringer i mikroøkonomi og ressursøkonomi.
